@@ -1,0 +1,194 @@
+/***
+* Author Name: Abdur Rahim
+* Author URI: 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #707070;
+  line-height: 1.5;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.column-full,
+.column-half,
+.column-three {
+  padding: 0 15px;
+}
+
+.column-full {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.column-half {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.column-three {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+/* commun styles end */
+
+header.header-area {
+  padding: 50px 0 20px;
+}
+/* End header
+================= */
+
+/* .hero-text {
+} */
+section.hero-area .row {
+  align-items: center;
+}
+section.hero-area {
+  padding: 70px 0;
+}
+
+.hero-text h1 {
+  font-size: 55px;
+  color: #575757;
+}
+.hero-text h1 span {
+  color: #fd5533;
+}
+
+.hero-text p {
+  margin: 30px 0;
+  font-size: 20px;
+  color: #575757;
+}
+
+.global-btn {
+  background: linear-gradient(45deg, #ffa868, #fe492e);
+  padding: 15px 40px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 40px;
+  text-transform: capitalize;
+}
+
+.global-btn:hover {
+  background: linear-gradient(-45deg, #ffa868, #fe492e);
+  box-shadow: 1px 1px 5px #717171;
+}
+
+.hero-image {
+  margin-left: -120px;
+}
+/* End hero
+================= */
+
+section.about-area {
+  background: url(assets/imges/feature-bg.png) no-repeat center / cover;
+  padding: 30px 0 0 0;
+}
+section.about-area .row {
+  align-items: flex-end;
+}
+.about-info {
+  padding: 100px 0;
+}
+
+.about-info p {
+  margin: 30px 0;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* End about
+================= */
+
+section.blog-area {
+  padding: 100px 0;
+}
+
+.blog-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.blog-content h2 {
+  margin: 0 0 20px 0;
+}
+
+.single-blog {
+  padding: 20px;
+  box-shadow: 0 0 10px #d4d4d4;
+  border-radius: 20px;
+}
+
+.single-blog h3 a {
+  color: #333;
+  margin: 30px 0 20px;
+  display: block;
+}
+.single-blog img {
+  width: 100%;
+  aspect-ratio: 1.7/1;
+  border-radius: 20px;
+  object-fit: cover;
+}
+/* End blog
+================= */
+
+.numbers-content {
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #d4d4d4;
+}
+
+.single-number {
+  text-align: center;
+}
+
+.single-number h5 {
+  font-size: 40px;
+}
+
+section.numbers-area {
+  padding: 0 0 70px;
+}
+/* End Numbers
+================= */
+
+footer.footer-area {
+  background: #0b0d17;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.foter-content img {
+  margin: 0 0 30px;
+}
+
+.foter-content p {
+  color: #ccc;
+}
