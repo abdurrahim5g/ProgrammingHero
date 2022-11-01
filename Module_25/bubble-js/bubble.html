@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In this file i will learn JS bubble</title>
+
+    <style>
+      #container {
+        padding: 5%;
+        background-color: aqua;
+      }
+      #div {
+        padding: 5%;
+        background-color: green;
+      }
+      #list {
+        padding: 5%;
+        background-color: tomato;
+      }
+
+      #list li {
+        padding: 5%;
+        background-color: skyblue;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>In this file I will learn how JS bubble work</h1>
+
+    <section id="container">
+      <div id="div">
+        <ul id="list">
+          <li>List item-1</li>
+          <li>List item-2</li>
+          <li>List item-3</li>
+          <li>List item-4</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- script -->
+    <script>
+      // click the parent
+      document.getElementById("container").addEventListener(
+        "click",
+        function () {
+          console.log("Container was clicked");
+        },
+        { capture: true }
+      );
+
+      // click on the div
+      document.getElementById("div").addEventListener("click", function () {
+        console.log("Div was Clicked");
+        // event.stopPropagation();
+      });
+      // click on the list
+      document.getElementById("list").addEventListener("click", function () {
+        console.log("List was Clicked");
+        // event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's play event with DOM</title>
+  </head>
+  <body>
+    <header>
+      <h1>JS Event</h1>
+    </header>
+
+    <main>
+      <section>
+        <button
+          onclick="alert('Do not click the button agein if you click then you are fired');"
+        >
+          Click me for Alert
+        </button>
+
+        <button onclick="document.body.style.backgroundColor = 'green';">
+          Make green
+        </button>
+
+        <button id="makeAqua" onclick="makeAqua()">
+          Make background Aqua color
+        </button>
+
+        <button id="makePink">Make Bg pink</button>
+      </section>
+
+      <section>
+        <h2>My faverite place in Bangladesh</h2>
+        <ul>
+          <li>Sajek</li>
+          <li>Chittagong</li>
+          <li>Jessore</li>
+          <li>Shylet</li>
+          <li>Rangpur</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Add Random Number from 0 to 100</h2>
+        <button id="addRandomNumber">Add Random Number</button>
+        <ul id="randomNumberContainer">
+          <li>98</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- conneck al js -->
+    <script src="js/event.js"></script>
+  </body>
+</html>
