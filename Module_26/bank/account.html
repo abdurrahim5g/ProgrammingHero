@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to your account</title>
+    <script src="//cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50 py-12">
+    <main class="w-9/12 mx-auto py-12 px-5 border rounded-lg">
+      <header class="mb-6">
+        <h1 class="font-bold text-3xl mb-2">Welcome to your account</h1>
+        <h5 class="font-semibold">Your AC/no is: 163 xxx xx xxx 51</h5>
+      </header>
+
+      <section class="balance-statement grid grid-cols-3 gap-5">
+        <div
+          class="single-balance-statement bg-cyan-400 py-4 px-6 border rounded-lg"
+        >
+          <h3 class="font-bold text-2xl text-white">Today Deposit</h3>
+          <p class="font-bold text-white text-3xl mt-5">
+            $<span id="todayDeposit">00</span>
+          </p>
+        </div>
+        <div
+          class="single-balance-statement bg-cyan-500 py-4 px-6 border rounded-lg"
+        >
+          <h3 class="font-bold text-2xl text-white">Today Withdrow</h3>
+          <p class="font-bold text-white text-3xl mt-5">
+            $<span id="todayWithdrow">00</span>
+          </p>
+        </div>
+        <div
+          class="single-balance-statement bg-cyan-600 py-4 px-6 border rounded-lg"
+        >
+          <h3 class="font-bold text-2xl text-white">Total Balance</h3>
+          <p class="font-bold text-white text-3xl mt-5">
+            $<span id="totalBalance">1200</span>
+          </p>
+        </div>
+      </section>
+      <!-- balance statement -->
+
+      <section class="account-controller grid grid-cols-2 mt-5 gap-5">
+        <div class="single-control-item bg-purple-500 p-5 border rounded-lg">
+          <h5 class="font-bold text-2xl text-white">Deposit</h5>
+          <input
+            type="number"
+            placeholder="$ How much you want to deposit"
+            class="w-full border rounded py-2 px-5 my-4 outline-none"
+            id="depositAmmount"
+          />
+          <button
+            class="bg-gray-50 hover:bg-blue-600 transition hover:shadow-lg text-blue-700 hover:text-white font-semibold rounded py-2 px-5"
+            id="depositButton"
+          >
+            Deposit
+          </button>
+        </div>
+        <div class="single-control-item bg-purple-600 p-5 border rounded-lg">
+          <h5 class="font-bold text-2xl text-white">Withdrow</h5>
+          <input
+            type="number"
+            placeholder="$ How much you want to withdrow"
+            class="w-full border rounded py-2 px-5 my-4 outline-none"
+            id="withdrowAmmount"
+          />
+          <button
+            class="bg-gray-50 hover:bg-blue-600 transition hover:shadow-lg text-blue-700 hover:text-white font-semibold rounded py-2 px-5"
+            id="withdrowButton"
+          >
+            Withdrow
+          </button>
+        </div>
+      </section>
+
+      <section class="history">
+        <button
+          class="bg-orange-500 hover:bg-blue-600 transition hover:shadow-lg text-white hover:text-white font-semibold rounded py-2 px-5 mt-5 w-full"
+          id="showHistory"
+        >
+          Show history
+        </button>
+        <div>
+          <ul id="history" class="mt-5" style="display: none"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- All add JS files -->
+    <script src="js/account.js"></script>
+  </body>
+</html>

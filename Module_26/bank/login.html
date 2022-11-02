@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I will make a bap ar Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="bg-slate-50 h-screen flex items-center">
+      <div class="form-content w-1/4 mx-auto bg-slate-200 py-16 px-5 rounded">
+        <h1 class="text-center font-bold text-2xl mb-12">
+          Welcome to <span>Login page.</span>
+        </h1>
+
+        <!-- login-form  -->
+        <div class="login-form">
+          <form action="#" class="text-center" id="login">
+            <div class="single-input">
+              <input
+                class="w-full border py-2 px-5 rounded outline-none"
+                type="text"
+                placeholder="example@gmail.com"
+                id="userEmail"
+              />
+            </div>
+
+            <div class="single-input my-10">
+              <input
+                class="w-full border py-2 px-5 rounded outline-none"
+                type="password"
+                placeholder="Enter your password"
+                id="userPassword"
+              />
+            </div>
+
+            <div class="single-input">
+              <input
+                class="hover:bg-blue-700 bg-blue-500 text-white py-3 px-10 rounded font-bold cursor-pointer transition"
+                type="submit"
+                value="Login"
+              />
+            </div>
+          </form>
+        </div>
+        <!-- login-form end -->
+      </div>
+
+      <!-- js files -->
+      <script src="js/login.js"></script>
+    </main>
+  </body>
+</html>
