@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <details>
+        ****** চ্যালেঞ্জ নাম্বার টু ****** <br />একটা ডিসকাউন্ট ক্যালকুলেটর এর
+        প্রাকটিস দিয়েছি। সেটা করো। যেখানে একটা প্রাইস লেখা থাকবে এবং একটা বাটন
+        আছে। সেটাতে ক্লিক করলে প্রাইস ৩০% কমে যাবে। এইটার আরেকটু এডভান্সড ভার্সন
+        হবে। তুমি যেদিন Apply বাটনে ক্লিক করবে তখন যদি পাশের টেক্সট বক্স এ DOM
+        লেখা থাকে তাহলে ডিসকাউন্ট কাজ করবে। প্রাইস ৩০% কমবে। আর যদি DOM না লিখে
+        অন্য কিছু লিখে। যেমন ধরো dom বা drum বা অন্য কিছু। তাহলে ডিসকাউন্ট কাজ
+        হবে না।
+      </details>
+    </header>
+    <main class="w-full h-screen bg-blue-50 flex items-center justify-center">
+      <div class="checkout-form w-1/4 py-4 px-5 border rounded-lg bg-blue-300">
+        <div class="single-input">
+          <label for="" class="block font-semibold text-xl mb-2"
+            >Original Price</label
+          >
+          <input
+            type="text"
+            placeholder="Type the total price!"
+            class="w-full py-2 px-4 rounded outline-none"
+            id="original-price"
+          />
+        </div>
+        <div class="single-input my-3 overflow-hidden">
+          <label for="" class="block font-semibold text-xl mb-2"
+            >Use Coupne</label
+          >
+          <input
+            type="text"
+            placeholder="Apply Coupne!"
+            class="w-3/4 py-2 px-4 rounded float-left outline-none"
+            id="coupne-field"
+          />
+          <button
+            class="w-1/4 bg-white font-semibold border-l-2 rounded py-2"
+            id="apply-coupne"
+          >
+            Apply
+          </button>
+          <h4
+            class="overflow-hidden font-semibold text-red-500 mt-3"
+            id="invalide-coupne"
+          ></h4>
+        </div>
+
+        <h3 class="overflow-hidden font-semibold">
+          You should pay $<span id="payableAmount">600</span>
+        </h3>
+      </div>
+    </main>
+
+    <!-- link all the js files -->
+    <script src="discount.js"></script>
+  </body>
+</html>
