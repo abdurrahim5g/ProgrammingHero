@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo Lists</title>
+
+    <style>
+      div#todoContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      div#todoContainer > div {
+        padding: 20px 30px;
+        text-transform: capitalize;
+        background: pink;
+        border-radius: 10px;
+      }
+      /* div#todoContainer > .complete {
+        background: #00eb00;
+      } */
+    </style>
+
+    <!-- Link on bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2>In this file i will show all todo list from API</h2>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <section>
+      <div class="container">
+        <div id="todoContainer"></div>
+      </div>
+    </section>
+
+    <!-- JS -->
+    <script src="js/todo.js"></script>
+  </body>
+</html>

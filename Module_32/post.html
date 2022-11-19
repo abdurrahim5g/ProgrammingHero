@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In this file i WILL SHOW the posts from API</title>
+
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .posts-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .posts-container article {
+        border: 1px solid #999;
+        box-shadow: 1px 1px 5px #999;
+        border-radius: 7px;
+        padding: 20px 30px;
+      }
+      .posts-container article h2:first-letter {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center">
+        Welcome to my <span style="color: aqua">Blog</span>
+      </h1>
+
+      <main>
+        <section class="container">
+          <button onclick="loadPosts()" style="margin-bottom: 40px">
+            Load Posts
+          </button>
+          <div id="posts-container" class="posts-container">
+            <!-- posts container -->
+          </div>
+        </section>
+      </main>
+    </header>
+
+    <!-- All js files -->
+    <script src="js/posts.js"></script>
+  </body>
+</html>
