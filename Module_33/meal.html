@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Meal</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <h1>Welcome to my Meal info</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="search-form">
+              <input
+                type="text"
+                id="searchString"
+                placeholder="Search by keyword"
+              />
+              <button id="searchButton">Search</button>
+            </div>
+          </div>
+          <!-- row -->
+
+          <div class="row">
+            <div class="mail-container" id="mealsContainer">
+              <!-- meal-containers -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="backdrop" id="backdrop"></section>
+      <section class="modal" id="modal">
+        <div id="details"></div>
+      </section>
+    </footer>
+
+    <!-- js -->
+    <script src="js/meal.js"></script>
+  </body>
+</html>

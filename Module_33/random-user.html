@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Task: Show random user from random user API</h1>
+      <button onclick="fetchUsersAPI()">Load users</button>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="users-container" id="s-user">
+          <!-- data comes from API -->
+        </div>
+
+        <div class="users-container" id="users-container">
+          <!-- users container -->
+          <div class="single-user">
+            <img
+              src="https://randomuser.me/api/portraits/women/14.jpg"
+              alt=""
+            />
+            <h4>username</h4>
+            <h5>eugene.weaver@example.com</h5>
+            <p><strong>Age: </strong><span></span></p>
+            <p><strong>From: </strong><span>Country</span></p>
+          </div>
+          <div class="single-user">
+            <img
+              src="https://randomuser.me/api/portraits/women/14.jpg"
+              alt=""
+            />
+            <h4>username</h4>
+            <h5>eugene.weaver@example.com</h5>
+            <p><strong>Age: </strong><span></span></p>
+            <p><strong>From: </strong><span>Country</span></p>
+          </div>
+          <div class="single-user">
+            <img
+              src="https://randomuser.me/api/portraits/women/14.jpg"
+              alt=""
+            />
+            <h4>username</h4>
+            <h5>eugene.weaver@example.com</h5>
+            <p><strong>Age: </strong><span></span></p>
+            <p><strong>From: </strong><span>Country</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js     -->
+    <script src="js/random-user.js"></script>
+  </body>
+</html>
