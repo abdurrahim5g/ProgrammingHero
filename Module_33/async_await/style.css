@@ -1,0 +1,314 @@
+/*start home page*/
+/* header-area */
+
+/* end header area */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.homeCarosel .elementor-swiper-button {
+  background: #0b0f01;
+  height: 48px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.homeCarosel .elementor-swiper-button.elementor-swiper-button-prev {
+  left: 0;
+}
+
+.homeCarosel .elementor-swiper-button.elementor-swiper-button-next {
+  right: 0;
+}
+.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-552b7831.animateBg {
+  transition: 0.5s;
+}
+
+.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-552b7831.animateBg:hover {
+  transform: scale(1.1);
+}
+
+.sectionplayicon .elementor-container.elementor-column-gap-default {
+  overflow: hidden;
+}
+.homePlayIcon .elementor-icon i {
+  height: 80px;
+  width: 80px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.animateBg:hover .homePlayIcon .elementor-icon i {
+  background: #043d5b;
+  color: #fff;
+}
+
+/*contactformseven*/
+.contact-form-seven {
+  margin: 0 -15px;
+}
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+.inpoptions {
+  margin-bottom: 15px;
+}
+.inpoptions label {
+  display: block;
+  width: 100%;
+  padding: 0 9px;
+}
+.inpoptions textarea {
+  height: 200px;
+}
+.inpoptions input,
+.inpoptions textarea,
+.inpoptions select {
+  padding: 15px;
+  border-radius: 0px;
+}
+
+.inpoptions input::placeholder,
+.inpoptions textarea::placeholder,
+.inpoptions select {
+  color: #686868;
+  font-size: 16px;
+  font-family: "Raleway";
+  font-weight: 400;
+  line-height: 17px;
+}
+.inpoptions span.wpcf7-list-item-label {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Raleway";
+  font-weight: 400;
+  line-height: 17px;
+}
+.inpoptions input,
+.inpoptions textarea,
+.inpoptions select {
+  border: none;
+}
+
+.inpoptions textarea:focus,
+.inpoptions input:focus,
+.inpoptions select:focus {
+  outline: none;
+}
+.submitButton {
+  padding: 0 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.submitButton input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background-color: #043d5b;
+  color: #fff;
+  font-size: 17px;
+  font-family: Raleway, sans-serif;
+  padding: 8px 17px;
+  font-weight: 700;
+}
+/*endcontactform*/
+/*end home page*/
+/* responsive */
+
+p:last-child {
+  margin: 0;
+}
+
+/* Header Css Start  */
+
+.stikeyMenu {
+  position: fixed !important;
+  z-index: 1111;
+  left: 0;
+  top: -90px !important;
+  width: 100%;
+  box-shadow: 0 0 5px #061c28;
+  transition: 0.3s ease all !important;
+}
+
+.stikeyMenu.headerStikey {
+  top: 0px !important;
+}
+
+.headerColum,
+.headerColum > div,
+.mainHeader > .elementor-container.elementor-column-gap-default {
+  position: unset !important;
+}
+
+.socialTop {
+  position: absolute;
+  right: 10px;
+  width: auto !important;
+  top: 5px;
+}
+
+.mainHeader
+  .elementor-nav-menu--layout-horizontal
+  .elementor-nav-menu
+  > li.LogoLink
+  a {
+  font-size: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px !important;
+  height: 90px !important;
+  padding: 0 !important;
+}
+
+.mainHeader
+  .elementor-nav-menu--layout-horizontal
+  .elementor-nav-menu
+  > li.LogoLink
+  a::before {
+  display: block;
+  background-size: contain;
+  background-image: url(https://marina-landings.com/wp-content/uploads/2022/10/Logo2.png);
+  content: "";
+  width: 190px !important;
+  height: 90px !important;
+  background-color: unset !important;
+}
+
+.mainHeader
+  .elementor-nav-menu--layout-horizontal
+  .elementor-nav-menu
+  > li.LogoLink {
+  padding: 0 10px;
+}
+
+.stikeyMenu
+  .elementor-nav-menu--layout-horizontal
+  .elementor-nav-menu
+  > li.LogoLink {
+  display: none !important;
+}
+
+/* Header Css End */
+
+@media only screen and (max-width: 1024px) {
+  .main-menuu
+    .elementor-widget-container
+    nav.elementor-nav-menu--main
+    ul#menu-1-a4fc8a4
+    li:nth-child(3):after {
+    display: none;
+  }
+
+  .headerColum > .elementor-widget-wrap.elementor-element-populated {
+    flex-wrap: nowrap;
+  }
+
+  .mobileNav.elementor-widget-nav-menu {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .elementor-nav-menu--stretch
+    .elementor-nav-menu__container.elementor-nav-menu--dropdown {
+    top: 70px !important;
+    background: #043d5b;
+  }
+
+  .elementor-nav-menu li {
+    font-weight: 100;
+  }
+
+  .elementor-81
+    .elementor-element.elementor-element-4eb598c
+    .elementor-nav-menu
+    .elementor-item {
+    padding: 10px 0;
+    color: #bfbfbf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+  }
+
+  .elementor-nav-menu__align-center .elementor-nav-menu {
+    padding: 0 45px 30px 45px;
+  }
+
+  .elementor-nav-menu li.LogoLink {
+    display: none !important;
+  }
+
+  .elementor-nav-menu .sub-arrow i {
+    transform: rotate(-90deg);
+  }
+
+  .elementor-nav-menu--dropdown .elementor-item.highlighted {
+    background: unset;
+  }
+
+  .elementor-nav-menu--dropdown.elementor-nav-menu__container
+    .elementor-sub-item {
+    font-size: 16px;
+    background: transparent;
+    line-height: 35px;
+    padding: 10px 0 10px 20px;
+    color: #bfbfbf;
+    /* border-bottom: 1px solid #fff; */
+    border-radius: 0 !important;
+    text-transform: uppercase;
+  }
+
+  .elementor-nav-menu--dropdown {
+    background: transparent;
+  }
+
+  .elementor-nav-menu--dropdown .elementor-item.highlighted .sub-arrow i {
+    transform: rotate(0deg);
+  }
+
+  .elementor-81
+    .elementor-element.elementor-element-4eb598c
+    .elementor-nav-menu
+    .elementor-item:hover {
+    background: transparent;
+  }
+
+  ul.sub-menu.elementor-nav-menu--dropdown,
+  ul.sub-menu.elementor-nav-menu--dropdown * {
+    border-radius: 0 !important;
+  }
+
+  ul.sub-menu.elementor-nav-menu--dropdown > li {
+    border-bottom: 1px solid #fff;
+  }
+
+  .show-map a {
+    color: #292d70;
+    font-size: 20px;
+    font-weight: 700;
+  }
+} /* (max-width: 1024px) */
+
+@media only screen and (max-width: 767px) {
+  .col-md-6 {
+    width: 100%;
+  }
+} /* (max-width: 767px) */
+/* end responsive */
