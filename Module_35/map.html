@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+
+    <style>
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+
+      #map-content h4 {
+        font-size: 16px;
+        margin: 0 0 10px;
+      }
+      #map-content p {
+        margin: 0;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7qTufM3DibIxVlQlqiBE6IRz8fvZnASw&callback=initMap&v=weekly"></script>
+
+    <script>
+      var map;
+      var InforObj = [];
+      var centerCords = {
+        lat: 26.08357461306824,
+        lng: -80.1498291248643,
+      };
+      var markersOnMap = [
+        {
+          placeName: "Snyder Park",
+          address: "3299 SW 4th Ave, Fort Lauderdale, FL 33315",
+          LatLng: [
+            {
+              lat: 26.083322519263096,
+              lng: -80.1498360881599,
+            },
+          ],
+        },
+        {
+          placeName: "Bill Keith Preserve Park",
+          address: "1720 SW 17th St, Fort Lauderdale, FL 33312",
+          LatLng: [
+            {
+              lat: 26.09952356884208,
+              lng: -80.16501603830031,
+            },
+          ],
+        },
+        {
+          placeName: "Edgewood Passive Park",
+          address: "1739-1799 SW 33rd St, Fort Lauderdale, FL 33315",
+          LatLng: [
+            {
+              lat: 26.082372932861773,
+              lng: -80.16274106369109,
+            },
+          ],
+        },
+        {
+          placeName: "Esterre Davis Wright Park",
+          address: "1621 SW 24th St, Fort Lauderdale, FL 33315",
+          LatLng: [
+            {
+              lat: 26.09264469098846,
+              lng: -80.16277392153455,
+            },
+          ],
+        },
+        {
+          placeName: "F3 Marina",
+          address: "1335 SE 16th St, Fort Lauderdale, FL 33316",
+          LatLng: [
+            {
+              lat: 26.102111764172566,
+              lng: -80.12934097749755,
+            },
+          ],
+        },
+        {
+          placeName: "Port 32",
+          address: "1915 SW 21st Ave, Fort Lauderdale, FL 33312",
+          LatLng: [
+            {
+              lat: 26.098166751465968,
+              lng: -80.17050707079366,
+            },
+          ],
+        },
+        {
+          placeName: "Nautical Ventures",
+          address: "4470 Anglers Ave, Fort Lauderdale, FL 33312",
+          LatLng: [
+            {
+              lat: 26.066836668001763,
+              lng: -80.168150155519,
+            },
+          ],
+        },
+        {
+          placeName: "Lauderdale Small Boat Inc. Club",
+          address: "1740 SW 42nd St, Fort Lauderdale, FL 33315",
+          LatLng: [
+            {
+              lat: 26.069609329977677,
+              lng: -80.16514704534397,
+            },
+          ],
+        },
+        {
+          placeName: "Harbor Town Marina ",
+          address: "801 NE 3rd St, Dania Beach, FL 33004",
+          LatLng: [
+            {
+              lat: 26.058244563572163,
+              lng: -80.12949267331751,
+            },
+          ],
+        },
+        {
+          placeName: "Riverwalk ",
+          address: "888 E Las Olas Blvd Suite 210, Fort Lauderdale, FL 33301",
+          LatLng: [
+            {
+              lat: 26.11895115572505,
+              lng: -80.13430231490406,
+            },
+          ],
+        },
+        {
+          placeName: "Broward Center for the Performing Arts",
+          address: "201 SW 5th Ave, Fort Lauderdale, FL 33312",
+          LatLng: [
+            {
+              lat: 26.119306798913005,
+              lng: -80.14875292314568,
+            },
+          ],
+        },
+        {
+          placeName: "Museum of Discovery & Science ",
+          address: "401 SW 2nd St, Fort Lauderdale, FL 33312",
+          LatLng: [
+            {
+              lat: 26.120723265152805,
+              lng: -80.14801101347877,
+            },
+          ],
+        },
+        {
+          placeName: "The Parker ",
+          address: "707 NE 8th St, Fort Lauderdale, FL 33304",
+          LatLng: [
+            {
+              lat: 26.1343738903161,
+              lng: -80.13614201264211,
+            },
+          ],
+        },
+        {
+          placeName: "Jet Stream Disc Golf",
+          address: "3299 SW 4th Ave. Fort Lauderdale, FL 33315",
+          LatLng: [
+            {
+              lat: 26.083319473973077,
+              lng: -80.14983734351023,
+            },
+          ],
+        },
+        {
+          placeName: "The Hardrock Hotel & Casino",
+          address: "1 Seminole Way, Hollywood, FL 33314",
+          LatLng: [
+            {
+              lat: 26.05082265036229,
+              lng: -80.21154689410122,
+            },
+          ],
+        },
+        {
+          placeName: "Dania Pointe (Various restaurants and shopping)",
+          address: "139 S Compass Wy, Dania Beach, FL 33004",
+          LatLng: [
+            {
+              lat: 26.05150855679815,
+              lng: -80.15925277390227,
+            },
+          ],
+        },
+        {
+          placeName: "Bowlero Bowling Alley at Dania Pointe",
+          address: "1841 Way Pointe Pl, Dania Beach, FL 33004",
+          LatLng: [
+            {
+              lat: 26.053868652955316,
+              lng: -80.1600778107863,
+            },
+          ],
+        },
+        {
+          placeName: "Regal Cinemas Dania Pointe",
+          address: "128 Sunset Dr, Dania Beach, FL 33004",
+          LatLng: [
+            {
+              lat: 26.05247424582537,
+              lng: -80.16087952787367,
+            },
+          ],
+        },
+        {
+          placeName: "YOT Bar & Kitchen",
+          address: "2015 SW 20th St, Fort Lauderdale, FL 33315",
+          LatLng: [
+            {
+              lat: 26.098085815465204,
+              lng: -80.16631835854533,
+            },
+          ],
+        },
+        {
+          placeName: "Rendezvous ",
+          address: "2525 Marina Bay Dr W, Fort Lauderdale, FL 33312",
+          LatLng: [
+            {
+              lat: 26.090936631253534,
+              lng: -80.17124447389031,
+            },
+          ],
+        },
+        {
+          placeName: "Tap 42 Craft Kitchen & Bar",
+          address: "1411 S Andrews Ave, Fort Lauderdale, FL 33316",
+          LatLng: [
+            {
+              lat: 26.104262424755788,
+              lng: -80.14313895854347,
+            },
+          ],
+        },
+        {
+          placeName: "LauderAle Brewery",
+          address: "3305 SE 14th Ave, Fort Lauderdale, FL 33316",
+          LatLng: [
+            {
+              lat: 26.08384406946603,
+              lng: -80.12852887389242,
+            },
+          ],
+        },
+        {
+          placeName: "Riverside Market South ",
+          address: "3218 SE 6th Ave, Fort Lauderdale, FL 33316",
+          LatLng: [
+            {
+              lat: 26.084805524309857,
+              lng: -80.13751564320661,
+            },
+          ],
+        },
+      ];
+
+      window.onload = function () {
+        initMap();
+      };
+
+      function addMarker() {
+        for (var i = 0; i < markersOnMap.length; i++) {
+          var contentString = `
+          <div id="map-content">
+            <h4>${markersOnMap[i].placeName}</h4>
+            <p><strong>Address:</strong> ${markersOnMap[i].address}</p>
+          </div>
+        `;
+
+          const marker = new google.maps.Marker({
+            position: markersOnMap[i].LatLng[0],
+            map: map,
+          });
+
+          const infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200,
+          });
+
+          marker.addListener("mouseover", function () {
+            closeOtherInfo();
+            infowindow.open(marker.get("map"), marker);
+            InforObj[0] = infowindow;
+          });
+        }
+      }
+
+      function closeOtherInfo() {
+        if (InforObj.length > 0) {
+          /* detach the info-window from the marker ... undocumented in the API docs */
+          InforObj[0].set("marker", null);
+          /* and close it */
+          InforObj[0].close();
+          /* blank the array */
+          InforObj.length = 0;
+        }
+      }
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 11,
+          center: centerCords,
+        });
+        addMarker();
+      }
+    </script>
+  </body>
+</html>
